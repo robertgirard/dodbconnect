@@ -18,14 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-/*
+
 Route::group(['middleware' => 'auth:sanctum'], function(){
     //All secure URL's
     Route::get('/materials', 'MaterialController@index');
     Route::get('/locations', 'LocationController@index');
 });
-*/
+
 Route::post("login",[UserController::class,'index']);
 
-Route::get('/materials', 'MaterialController@index');
-Route::get('/locations', 'LocationController@index');
